@@ -1,5 +1,4 @@
 import React from "react";
-import "./Mainboard.css";
 
 function Mainboard() {
   return (
