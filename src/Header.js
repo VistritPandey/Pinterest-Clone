@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { IconButton } from "@material-ui/core";
 import PinterestIcon from "@material-ui/icons/Pinterest";
+import SearchIcon from "@material-ui/icons/Search";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import TextsmsIcon from "@material-ui/icons/Textsms";
+import FaceIcon from "@material-ui/icons/Face";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 function Header() {
   return (
@@ -17,10 +22,31 @@ function Header() {
       <FollowingButton>
         <a href="/">Following</a>
       </FollowingButton>
-      {/*<SearchWrapper>
-        <SearchBarWrapper></SearchBarWrapper>
+      <SearchWrapper>
+        <SearchBarWrapper>
+          <IconButton>
+            <SearchIcon />
+          </IconButton>
+          <form>
+            <input type="text" />
+            <button type="submit"></button>
+          </form>
+        </SearchBarWrapper>
       </SearchWrapper>
-      <IconWrapper></IconWrapper>*/}
+      <IconWrapper>
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+        <IconButton>
+          <TextsmsIcon />
+        </IconButton>
+        <IconButton>
+          <FaceIcon />
+        </IconButton>
+        <IconButton>
+          <KeyboardArrowDownIcon />
+        </IconButton>
+      </IconWrapper>
     </Wrapper>
   );
 }
@@ -77,3 +103,37 @@ const FollowingButton = styled(HomeButtons)`
     background-color: #e1e1e1;
   }
 `;
+
+const SearchWrapper = styled.div`
+  flex: 1;
+`;
+
+const SearchBarWrapper = styled.div`
+  background-color: #efefef;
+  display: flex;
+  height: 48px;
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  padding-left: 10px;
+
+  form {
+    display: flex;
+    flex: 1;
+  }
+  form > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  form > button {
+    display: none;
+  }
+  input:focus {
+    outline: none;
+  }
+`;
+
+const IconWrapper = styled.div``;
