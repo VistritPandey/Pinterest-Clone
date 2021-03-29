@@ -8,12 +8,12 @@ import TextsmsIcon from "@material-ui/icons/Textsms";
 import FaceIcon from "@material-ui/icons/Face";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
-function Header() {
+function Header(props) {
   const [input, setInput] = useState("");
 
   const onSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("this is ", input)
+    props.onSubmit(input);
   }
 
   return (
