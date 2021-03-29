@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Header onSubmit={onSearchSubmit}/>
-      <Mainboard />
+      <Mainboard pins={pins} />
     </div>
   );
 }
